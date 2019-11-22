@@ -54,7 +54,7 @@
 <script>
 import ScrollWheelCanvas from "./scrollwheel-canvas";
 export default {
-  name: "scroll-wheel",
+  name: "ScrollWheel",
   components: { ScrollWheelCanvas },
   data: function() {
     return {
