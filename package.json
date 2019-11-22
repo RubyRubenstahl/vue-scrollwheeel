@@ -1,7 +1,8 @@
 {
   "name": "vue-scrollwheel",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.3",
+  "description": "Canvas based scroll wheel for vue.js",
+  "main": "./dist/vue-scrollwheel.common.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/RubyRubenstahl/vue-scrollwheel"
@@ -9,6 +10,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-scrollwheel ./src/components/index.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit"
   },
@@ -30,6 +32,13 @@
     "prettier": "^1.18.2",
     "vue-template-compiler": "^2.6.10"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "author": "Ruby Rubenstahl",
   "license": "MIT"
 }
