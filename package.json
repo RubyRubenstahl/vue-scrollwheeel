@@ -1,0 +1,15 @@
+{
+  "name": "vue-scrollwheel",
+  "version": "0.0.2",
+  "description": "Canvas based scroll wheel for vue.js",
+  "main": "src/vue-scrollwheel.vue",
+  "dependencies": {
+    "vue2-touch-events": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ruby Rubenstahl",
+  "license": "MIT"
+}
