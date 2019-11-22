@@ -1,11 +1,14 @@
 <template>
-  <div>
+  <div class="container">
     <div
       @touchstart="handleTouchStart"
       @touchend="handleTouchEnd"
       @touchmove="handleTouchMove"
       @mousedown="handleMouseDown"
-      :style="`width:${width}px;height:${height}px;border-radius:${width*.8}px;overflow:hidden;border:8px solid #222;box-shadow:4px 5px 10px 0px #151515;background-color:${wheelColor}`"
+      :style="
+        `width:${width}px;height:${height}px;border-radius:${width *
+          0.8}px;overflow:hidden;border:8px solid #222;box-shadow:4px 5px 10px 0px #151515;background-color:${wheelColor}`
+      "
     >
       <scroll-wheel-canvas
         :width="width"
@@ -16,38 +19,36 @@
         :ridgeSpacing="ridgeSpacing"
       />
     </div>
-    <template v-if="debugMode">
-      <table>
-        <tr>
-          <td>Touch Active</td>
-          <td>{{active.toString()}}</td>
-        </tr>
-        <tr>
-          <td>Y</td>
-          <td>{{lastYPos}}</td>
-        </tr>
-        <tr>
-          <td>Delta</td>
-          <td>{{delta}}</td>
-        </tr>
-        <tr>
-          <td>Cumulative Delta</td>
-          <td>{{cumulativeDelta}}</td>
-        </tr>
-        <tr>
-          <td>Absolute Position</td>
-          <td>{{absolutePosition}}</td>
-        </tr>
-        <tr>
-          <td>Pixel Offset</td>
-          <td>{{pixelOffset}}</td>
-        </tr>
-        <tr>
-          <td>Debug</td>
-          <td>{{debugMode}}</td>
-        </tr>
-      </table>
-    </template>
+    <div class="debug" v-if="debugMode">
+      <div>
+        <div class="label">Touch Active:</div>
+        <div class="value">{{ active.toString() }}</div>
+      </div>
+      <div>
+        <div class="label">Y:</div>
+        <div class="value">{{ lastYPos }}</div>
+      </div>
+      <div>
+        <div class="label">Delta:</div>
+        <div class="value">{{ delta | truncate }}</div>
+      </div>
+      <div>
+        <div class="label">Cumulative Delta:</div>
+        <div class="value">{{ cumulativeDelta | truncate }}</div>
+      </div>
+      <div>
+        <div class="label">Absolute Position:</div>
+        <div class="value">{{ absolutePosition | truncate }}</div>
+      </div>
+      <div>
+        <div class="label">Pixel Offset:</div>
+        <div class="value">{{ pixelOffset }}</div>
+      </div>
+      <div>
+        <div class="label">Debug:</div>
+        <div class="value">{{ debugMode }}</div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -197,6 +198,30 @@ export default {
       };
       this.$emit("tick", tickData);
     }
+  },
+  filters: {
+    truncate: function(value) {
+      return Number(value).toFixed(2);
+    }
   }
 };
 </script>
+<style>
+.debug {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  margin: 16px;
+  width: 250px;
+}
+
+.debug > div {
+  display: flex;
+  justify-content: space-between;
+}
+.label {
+  opacity: 0.5;
+}
+</style>

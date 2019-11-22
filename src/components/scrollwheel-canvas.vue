@@ -42,6 +42,18 @@ export default {
     },
     height() {
       this.updateCanvas();
+    },
+    ridgeSpacing() {
+      this.updateCanvas();
+    },
+    ridgeColor() {
+      this.updateCanvas();
+    },
+    wheelColor() {
+      this.updateCanvas();
+    },
+    sensitivity() {
+      this.updateCanvas();
     }
   },
   methods: {
@@ -103,4 +115,3 @@ export default {
   }
 };
 </script>
-
