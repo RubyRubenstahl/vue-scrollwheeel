@@ -63,11 +63,15 @@ export default {
       lastYPos: null,
       delta: 0,
       cumulativeDelta: 0,
-      absolutePosition: 0,
+      absolutePosition: this.value,
       pixelOffset: 0
     };
   },
   props: {
+    value: {
+      type: Number,
+      default: 0
+    },
     tickThreshold: {
       type: Number,
       default: 10
@@ -202,6 +206,11 @@ export default {
   filters: {
     truncate: function(value) {
       return Number(value).toFixed(2);
+    }
+  },
+  watch: {
+    absolutePosition(val) {
+      this.$emit("input", val);
     }
   }
 };

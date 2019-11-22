@@ -25,6 +25,7 @@
         :ridgeSpacing="15"
         :ridgeColor="ridgeColor"
         :wheelColor="wheelColor"
+        v-model="level"
       />
     </div>
   </div>
@@ -38,7 +39,8 @@ export default {
     return {
       ridgeColor: "black",
       wheelColor: "white",
-      sensitivity: 1
+      sensitivity: 1,
+      level: 50
     };
   }
 };
