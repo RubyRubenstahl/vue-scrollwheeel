@@ -1,6 +1,6 @@
 {
   "name": "vue-scrollwheel",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Canvas based scroll wheel for vue.js",
   "main": "src/vue-scrollwheel.vue",
   "repository": {
