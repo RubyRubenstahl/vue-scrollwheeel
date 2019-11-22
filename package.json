@@ -1,19 +1,44 @@
 {
   "name": "vue-scrollwheel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Canvas based scroll wheel for vue.js",
-  "main": "src/vue-scrollwheel.vue",
+  "main": "./dist/vue-scrollwheel.common.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RubyRubenstahl/vue-scrollwheeel"
+    "url": "https://github.com/RubyRubenstahl/vue-scrollwheel"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-bundle": "vue-cli-service build --target lib --name vue-scrollwheel ./src/components/index.js",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "vue2-touch-events": "^2.0.0"
+    "core-js": "^3.3.2",
+    "vue": "^2.6.10"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-unit-jest": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^5.0.0",
+    "prettier": "^1.18.2",
+    "vue-template-compiler": "^2.6.10"
   },
+  "files": [
+    "dist/*",
+    "src/*",
+    "public/*",
+    "*.json",
+    "*.js"
+  ],
   "author": "Ruby Rubenstahl",
   "license": "MIT"
 }

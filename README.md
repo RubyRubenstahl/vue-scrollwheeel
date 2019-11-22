@@ -1,71 +1,34 @@
-<h1 align="center">Welcome to Vue Scrollwheel 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.2-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+# vue-scrollwheeel
 
-> Canvas based scroll wheel for vue.js
-
-## Install
-
-```sh
-npm install --save vue-scrollwheeel
+## Project setup
+```
+npm install
 ```
 
-## Props
-
-```JS
- props: {
-    tickThreshold: {
-      type: Number,
-      default: 10
-    },
-    sensitivity: {
-      type: Number,
-      default: 1
-    },
-    width: {
-      type: Number,
-      default: 50
-    },
-    height: {
-      type: Number,
-      default: 200
-    },
-    min: Number,
-    max: Number,
-    debugMode: {
-      type: Boolean,
-      default: false
-    },
-    ridgeSpacing: {
-      type: Number,
-      default: 10
-    },
-    ridgeColor: {
-      type: String,
-      default: "#444"
-    },
-    wheelColor: {
-      type: String,
-      default: "#AAA"
-    }
-  }
+### Compiles and hot-reloads for development
+```
+npm run serve
 ```
 
-## Author
+### Compiles and minifies for production
+```
+npm run build
+```
 
-👤 **Ruby Rubenstahl**
+### Run your tests
+```
+npm run test
+```
 
-- Website: http://www.ruby-lighting.com
-- Github: [@RubyRubenstahl](https://github.com/RubyRubenstahl)
+### Lints and fixes files
+```
+npm run lint
+```
 
-## Show your support
+### Run your unit tests
+```
+npm run test:unit
+```
 
-Give a ⭐️ if this project helped you!
-
----
-
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
